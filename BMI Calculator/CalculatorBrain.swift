@@ -7,3 +7,16 @@
 //
 
 import Foundation
+struct CalculatorBrain{
+    
+    var bmi:Float = 0.0
+    mutating func calculateBMI(height: Double, weight: Double) -> Double{
+        bmi = weight / (height * height)
+        return bmi
+    }
+    
+    func getBMIValue()->String{
+        let bmito1dp = String(format: "%.1f", bmi)
+        return bmito1dp
+    }
+}
